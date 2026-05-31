@@ -1,11 +1,12 @@
 import { PortfolioData } from "./types";
+import ProfilePicurl from "./assets/images/picture.png";
 
 export const DEFAULT_PORTFOLIO_DATA: PortfolioData = {
   personalInfo: {
     name: "Devanshu Parmar",
     title: "Full Stack Developer | AI Engineering",
     bio: "I am a Full Stack Engineer interested in AI Engineering, Retrieval-Augmented Generation (RAG), backend systems, developer tools, and web applications. I work primarily with Angular, React, SQL, and modern AI technologies, and enjoy building practical software that solves real-world problems.",
-    avatar: "/src/assets/images/picture.png",
+    avatar: ProfilePicurl,
     // avatar: "/src/assets/images/profile_image.jpeg",
     github: "https://github.com/Devanshu046",
     linkedin: "https://linkedin.com/in/devanshu-parmar",
