@@ -40,6 +40,16 @@ export interface ProjectItem {
   bulletPoints?: string[];
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  link: string;
+  publishedAt: string;
+  readingTime: string;
+  excerpt: string;
+  imageUrl?: string;
+}
+
 export interface PortfolioData {
   personalInfo: PersonalInfo;
   experiences: ExperienceItem[];

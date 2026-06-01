@@ -1,6 +1,6 @@
 import React from "react";
-import { 
-  Github, 
+import {
+  Github,
   Linkedin, 
   Twitter, 
   Mail, 
@@ -14,6 +14,7 @@ import {
   Milestone
 } from "lucide-react";
 import { PortfolioData } from "../types";
+import BlogSection from "./BlogSection";
 
 interface PortfolioViewProps {
   data: PortfolioData;
@@ -353,6 +354,8 @@ export default function PortfolioView({ data }: PortfolioViewProps) {
             )}
           </div>
         </section>
+
+        <BlogSection />
 
       </div>
 
