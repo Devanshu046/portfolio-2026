@@ -179,12 +179,12 @@ export default function PortfolioView({ data }: PortfolioViewProps) {
             TIMELINE
           </h2> */}
           
-          <div id="timeline-container" className="relative pl-2 sm:pl-0">
+          <div id="timeline-container" className="relative">
             {/* The Vertical Timeline Line: Perfectly aligned */}
             {experiences.length > 0 && (
               <div 
                 id="timeline-line" 
-                className="absolute left-[84px] top-3 bottom-3 w-[1.5px] bg-zinc-200 hidden sm:block z-0" 
+                className="absolute left-[84px] top-3 bottom-3 w-[1.5px] bg-zinc-200 block z-0" 
               />
             )}
             
@@ -192,15 +192,15 @@ export default function PortfolioView({ data }: PortfolioViewProps) {
               {experiences.map((exp, index) => {
                 const itemID = `timeline-item-${index}`;
                 return (
-                  <div key={exp.id || index} id={itemID} className="flex flex-col sm:flex-row sm:items-start relative z-10">
+                  <div key={exp.id || index} id={itemID} className="flex items-start relative z-10">
                     
                     {/* Date / Period Column (Left) */}
-                    <div id={`${itemID}-date`} className="w-full sm:w-[78px] text-zinc-500 text-[12px] font-medium whitespace-nowrap sm:text-right sm:pr-4 sm:pt-0.5 pb-1 sm:pb-0">
+                    <div id={`${itemID}-date`} className="w-[78px] shrink-0 text-zinc-500 text-[12px] font-medium whitespace-nowrap text-right pr-4 pt-0.5">
                       {exp.date}
                     </div>
                     
                     {/* Centered Timeline Dot: Positioned perfectly on top of vertical line */}
-                    <div id={`${itemID}-dot-container`} className="hidden sm:flex w-[12px] justify-center pt-2 relative z-20">
+                    <div id={`${itemID}-dot-container`} className="flex w-[12px] shrink-0 justify-center pt-2 relative z-20">
                       <div 
                         id={`${itemID}-dot`} 
                         className={`w-2 h-2 rounded-full ring-4 ring-white transition-transform hover:scale-125 duration-150 ${
@@ -210,7 +210,7 @@ export default function PortfolioView({ data }: PortfolioViewProps) {
                     </div>
                     
                     {/* Role Title and Description Column (Right) */}
-                    <div id={`${itemID}-details`} className="flex-1 sm:pl-3">
+                    <div id={`${itemID}-details`} className="flex-1 min-w-0 pl-3">
                       <h3 id={`${itemID}-title`} className="font-semibold text-[14px] text-zinc-600 font-sans tracking-tight">
                         {exp.title}
                       </h3>
