@@ -104,6 +104,6 @@ This portfolio follows a minimalist approach:
 
 Feel free to explore the projects and reach out for collaboration or opportunities.
 
----
+----
 
 Built by Devanshu Parmar.
