@@ -3,21 +3,11 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-import { blogsApiHandler } from './server/blogs';
-
 export default defineConfig(() => {
   return {
     plugins: [
       react(),
       tailwindcss(),
-      {
-        name: 'medium-rss-api',
-        configureServer(server) {
-          server.middlewares.use('/api/blogs', (req, res) => {
-            void blogsApiHandler(req, res);
-          });
-        },
-      },
     ],
     resolve: {
       alias: {
